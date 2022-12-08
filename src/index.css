@@ -52,7 +52,13 @@
 
 *,
 ::before,
-::after body {
+::after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
   font-family: Inter, Intersans-serif, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue';
@@ -68,5 +74,5 @@
   flex: 1 0 100%;
   max-width: 100%; /* 656px */
   box-shadow: var(--box-shadow);
-  padding: 3.375em;
+  padding: clamp(1em, 4vmin, 3.75em);
 }
