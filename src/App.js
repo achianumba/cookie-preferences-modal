@@ -30,7 +30,7 @@ function App() {
         </p>
         <Button
           type="submit"
-          className="allow__all__cookies"
+          className="cookies-form__privacy__allow-all"
           onClick={allowAll}
         >
           Allow all
@@ -45,7 +45,7 @@ function App() {
           <ConsentPreference
             label="Strictly Necessary Cookies"
             name="neccessary"
-            active={true}
+            activeByDefault={true}
           />
 
           <ConsentPreference label="Functional Cookies" name="neccessary" />
@@ -58,7 +58,7 @@ function App() {
           />
         </div>
 
-        <div className="reject-all__or__submit">
+        <div className="manage-consent-preferences-reject-or-submit">
           <Button type="reset" className="reject-all">
             Reject all
           </Button>

@@ -1,0 +1,10 @@
+.button {
+  display: inline-block;
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: var(--text-2);
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  white-space: nowrap;
+}

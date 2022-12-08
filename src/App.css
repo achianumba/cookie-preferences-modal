@@ -1,0 +1,60 @@
+.cookies-modal-form {
+  max-width: 100%;
+  position: relative;
+}
+
+.cookies-modal-form::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: 71.813285458%;
+  min-height: 65.229110512%;
+  background-color: var(--dark-blue);
+  border-radius: clamp(1em, 7vmin, 5em);
+  z-index: -2;
+}
+
+.cookies-form__privacy {
+  margin-bottom: 40px;
+}
+
+.cookies-form__privacy__heading,
+.cookies-form__privacy__info {
+  color: var(--dark-blue);
+  margin-bottom: 16px;
+}
+
+.cookies-form__privacy__heading {
+  font-size: var(--text-3);
+  font-weight: var(--font-weight-600);
+}
+
+.cookies-form__privacy__info {
+  font-size: var(--text-1);
+  font-weight: var(--font-weight-400);
+}
+
+button.cookies-form__privacy__allow-all {
+  display: block;
+}
+
+.manage-consent-preferences {
+}
+
+.manage-consent-preferences__heading {
+  font-size: var(--text-2);
+  font-weight: var(--font-weight-600);
+  margin-bottom: 16px;
+}
+
+.consent-preferences {
+  margin-bottom: 16px;
+}
+
+.manage-consent-preferences-reject-or-submit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
