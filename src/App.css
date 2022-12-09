@@ -1,6 +1,7 @@
 .cookies-modal-form {
   max-width: 100%;
   position: relative;
+  padding: clamp(1em, 4vmin, 3.75em);
 }
 
 .cookies-modal-form::before {
@@ -34,6 +35,7 @@
 .cookies-form__privacy__info {
   font-size: var(--text-1);
   font-weight: var(--font-weight-400);
+  text-align: justify;
 }
 
 button.cookies-form__privacy__allow-all {
@@ -57,4 +59,29 @@ button.cookies-form__privacy__allow-all {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+@media screen and (min-width: 424px) {
+  .cookies-modal-form::before {
+    top: -32px;
+    left: -32px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .cookies-modal-form::before {
+    top: -40px;
+    left: -40px;
+  }
+}
+
+@media screen and (min-width: 664px) {
+  .cookies-modal-form {
+    padding: 3.75em;
+  }
+
+  .cookies-modal-form::before {
+    top: -85px;
+    left: -85px;
+  }
 }

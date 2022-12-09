@@ -3,10 +3,19 @@ import addIcon from '../../images/icon-add.svg';
 import { useRef } from 'react';
 
 const ConsentPreference = ({ label, name, activeByDefault }) => {
-  const switchRef = useRef();
-  const toggleRef = useRef();
+  const switchRef = useRef(null);
+  const toggleRef = useRef(null);
+  const checkboxRef = useRef(null);
 
-  const togglePreference = () => {};
+  const togglePreference = () => {
+    if (!switchRef.current.classList.contains('active-by-default')) {
+      switchRef.current.classList.toggle('consent-preference__switch--on');
+      toggleRef.current.classList.toggle(
+        'consent-preference__switch__toggle--on'
+      );
+      checkboxRef.current.checked = !checkboxRef.current.checked;
+    }
+  };
 
   return (
     <div className="consent-preference">
@@ -29,12 +38,17 @@ const ConsentPreference = ({ label, name, activeByDefault }) => {
             ? 'active-by-default consent-preference__checkbox'
             : 'consent-preference__checkbox'
         }
+        ref={activeByDefault ? null : checkboxRef}
         checked={activeByDefault ? activeByDefault : false}
         disabled={activeByDefault ? activeByDefault : false}
       />
 
       <div
-        className="consent-preference__switch"
+        className={
+          activeByDefault
+            ? 'consent-preference__switch active-by-default'
+            : 'consent-preference__switch'
+        }
         role="button"
         onClick={togglePreference}
         ref={switchRef}

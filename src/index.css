@@ -58,7 +58,6 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  outline: 1px solid red;
 }
 
 body {
@@ -76,9 +75,15 @@ body {
 
 .root {
   flex: 1 0 100%;
-  max-width: 100%; /* 656px */
+  max-width: 100%;
   box-shadow: var(--box-shadow);
-  padding: clamp(1em, 4vmin, 3.75em);
   border-radius: clamp(1em, 4vmin, 2em);
   background-color: var(--white);
+}
+
+@media screen and (min-width: 664px) {
+  .root {
+    flex: 1 0 557px;
+    max-width: 557px;
+  }
 }
